@@ -1,0 +1,21 @@
+<form role="form" [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+  <div class="mb-3">
+    <label for="exampleInputFirstname1" class="form-label">Firstname</label>
+    <input formControlName="firstName" type="text" class="form-control" id="exampleInputFirstname1" aria-describedby="emailHelp">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputLastname1" class="form-label">Lastname</label>
+    <input formControlName="lastName" type="email" class="form-control" id="exampleInputLastname1" aria-describedby="emailHelp">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email</label>
+    <input formControlName="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input formControlName="password" type="password" class="form-control" id="exampleInputPassword1">
+  </div>
+  <button *ngIf="disableSubmit" type="button" class="btn btn-primary" disabled>Submit</button>
+  <button *ngIf="!disableSubmit" type="submit" class="btn btn-primary">Submit</button>
+</form>
